@@ -1,0 +1,14 @@
+*/bin
+*/obj
+*.dat
+*.map
+*.suo
+
+.vscode/
+lib/
+.metadata/
+.tscache/
+node_modules/
+platforms/
+hooks/
+references.d.ts
