@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     - Connexion avec FB
     - Creation de token
     - Creation du profil sur Evend.com
-    - Si ça fonctionne go > liste des evenements ! 
+    - Si ça fonctionne go > liste des evenements !
   */
   login(){
     this._router.navigate(["EventList"]);

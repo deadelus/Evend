@@ -11,5 +11,31 @@
     "exclude": [
         "node_modules",
         "platforms"
-    ]
+    ],
+    "filesGlob": [
+        "./*.ts",
+        "./app/*.ts",
+        "./app/pages/**/*.ts",
+        "./app/shared/*.ts",
+        "./app/shared/**/*.ts",
+        "./app/utils/**/*.ts"
+    ],
+    "files": [
+        "./references.d.ts",
+        "./app/app.component.ts",
+        "./app/main.ts",
+        "./app/pages/event/event-item.component.ts",
+        "./app/pages/event/event-list.component.ts",
+        "./app/pages/login/login.component.ts",
+        "./app/shared/config.ts",
+        "./app/shared/event/event.service.ts",
+        "./app/shared/event/event.ts",
+        "./app/shared/user/user.service.ts",
+        "./app/shared/user/user.ts",
+        "./app/utils/hint-util.ts",
+        "./app/utils/status-bar-util.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
 }
