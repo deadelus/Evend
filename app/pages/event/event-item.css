@@ -1,0 +1,26 @@
+.event-row {
+    /*background-color: #eeeeee;*/
+    height: 70;
+}
+.event-name{
+    font-size: 20;
+    height: 20;
+    width: 300;
+    margin-top: 6;
+}
+.event-spec{
+    font-size: 12;
+    margin-top: 6;
+    height: 24;
+}
+.picture {
+    background-color: #181;
+    height: 56;
+    width: 70;
+    margin: 7;
+}
+.description {
+    margin: 7;
+    margin-left: 0;
+    /*background-color: aliceblue;*/
+}

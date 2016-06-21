@@ -1,0 +1,28 @@
+StackLayout {
+  padding-bottom: 15;
+  background-color: #181818;
+}
+Image {
+  margin-top: 100;
+  margin-bottom: 235;
+}
+Button, TextField {
+  margin-left: 16;
+  margin-right: 16;
+  margin-bottom: 10;
+}
+.login-button {
+  border-color: #282828;
+  border-width: 1;
+  margin-top: 20;
+  color: #fbfbfb;
+  font-size: 20;
+  height: 50;
+}
+.help-button{
+  margin-top: 5;
+  color: #fbfbfb;
+  font-size: 12;
+  height: 12;
+  text-align: right;
+}

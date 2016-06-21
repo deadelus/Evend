@@ -1,0 +1,15 @@
+<StackLayout #container
+  horizontalAlignment="stretch"
+  verticalAlignment="stretch"
+  >
+  <Image src="http://placehold.it/150x150" stretch="none" horizontalAlignment="center"></Image>
+
+  <!--
+  <TextField #email hint="Email Address" keyboardType="email" [(ngModel)]="user.email"
+    autocorrect="false" autocapitalizationType="none"></TextField>
+  <TextField #password hint="Password" secure="true" [(ngModel)]="user.password"></TextField>
+  -->
+  <!--<Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'" class="submit-button" (tap)="submit()"></Button>-->
+  <Button text="Login with Facebook" class="login-button" (tap)="login()"></Button>
+  <Button text="help ?" class="help-button"></Button>
+</StackLayout>
