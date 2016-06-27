@@ -2,6 +2,7 @@ import {Injectable} from "@angular/core";
 import {Http, Headers, Response} from "@angular/http";
 import {Config} from "../config";
 import {Event} from "./event";
+import {_Date,_Likes,_Location} from "../other/other";
 import {Observable} from "rxjs/Rx";
 import "rxjs/add/operator/map";
 
@@ -12,48 +13,55 @@ export class EventService {
   load() {
     let headers = new Headers();
     headers.append("Authorization", "Bearer " + Config.token);
-
-    return this._http.get(Config.apiUrl + "Groceries", {
+    return this._http.get(Config.apiUrl + "events", {
       headers: headers
     })
-    .map(res => res.json())
+    .map(response => response.json())
     .map(data => {
       let EventList = [];
-      data.Result.forEach((grocery) => {
-        EventList.push(new Event());
+      data.forEach((event) => {
+        EventList.push(event);
       });
       return EventList;
     })
     .catch(this.handleErrors);
   }
 
-  add(name: string) {
+  add(EventObject: Event) {
     let headers = new Headers();
-    headers.append("Authorization", "Bearer " + Config.token);
+    // headers.append("Authorization", "Bearer " + Config.token);
     headers.append("Content-Type", "application/json");
-
     return this._http.post(
-      Config.apiUrl + "Events",
-      JSON.stringify({ Name: name }),
+      Config.apiUrl + "events",
+      JSON.stringify(EventObject),
       { headers: headers }
     )
     .map(res => res.json())
     .map(data => {
-      // return new Event(data.Result.Id, name);
+      return new Event(
+        data.id,
+        data.Guid,
+        data.Name,
+        data.Created,
+        data.IsActive,
+        data.Picture,
+        data.Style,
+        data.Food,
+        data.Drink,
+        data.Ticket,
+        data.Ticket_link,
+        data.Start,
+        data.End,
+        data.Location,
+        data.Likes,
+        data.Description,
+        data.Going,
+        data.Interested,
+        data.Maybe,
+        data.Guestlist,
+        data.Owner
+      );
     })
-    .catch(this.handleErrors);
-  }
-
-  delete(id: string) {
-    var headers = new Headers();
-    headers.append("Authorization", "Bearer " + Config.token);
-    headers.append("Content-Type", "application/json");
-
-    return this._http.delete(
-      Config.apiUrl + "Event/" + id,
-      { headers: headers }
-    )
-    .map(res => res.json())
     .catch(this.handleErrors);
   }
 

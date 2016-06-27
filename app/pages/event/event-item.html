@@ -4,14 +4,14 @@
     <!--<Image src="http://placehold.it/50x50" stretch="none" horizontalAlignment="center"></Image>-->
       </StackLayout>
       <StackLayout class="description" row="0" col="1" orientation="vertical">
-        <Label class="event-name" [text]="event.name"></Label>
-        <StackLayout orientation="horizontal">
-          <Label class="event-spec" [text]="event.money"></Label>
-          <Label class="event-spec" [text]="event.drink ? 'D' : ''"></Label>
-          <Label class="event-spec" [text]="event.food ? 'F' : ''"></Label>
-          <Label class="event-spec" [text]="' - ' + event.start + ' à ' + event.starth + ' - '"></Label>
+        <Label class="event-name" text="{{ event.Name }}"></Label>
+        <!-- <StackLayout orientation="horizontal">
+          <Label class="event-spec" [text]="event.Ticket"></Label>
+          <Label class="event-spec" [text]="event.Drink ? 'D' : ''"></Label>
+          <Label class="event-spec" [text]="event.Food ? 'F' : ''"></Label>
+          <Label class="event-spec" [text]="' - ' + event.Start.day + ' à ' + event.Start.hour"></Label>
           <Label class="event-spec" [text]="event.invite"></Label>
-        </StackLayout>
+        </StackLayout> -->
       </StackLayout>
     </GridLayout>
 </StackLayout>
