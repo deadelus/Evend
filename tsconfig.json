@@ -24,6 +24,8 @@
         "./references.d.ts",
         "./app/app.component.ts",
         "./app/main.ts",
+        "./app/pages/event/event-item-add.component.ts",
+        "./app/pages/event/event-item-detail.ts",
         "./app/pages/event/event-item.component.ts",
         "./app/pages/event/event-list.component.ts",
         "./app/pages/login/login.component.ts",

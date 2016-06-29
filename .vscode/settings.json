@@ -1,0 +1,17 @@
+// Placez vos paramètres dans ce fichier pour remplacer les paramètres par défaut et les paramètres utilisateur.
+{
+    //-------- Configuration des fichiers --------
+
+    // Configurez les modèles Glob pour l'exclusion des fichiers et des dossiers.
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "**/.vscode": true,
+        "**/hooks": true,
+        "**/platforms": true,
+        "**/node_modules": true,
+        "**/*.js.map": true,
+        "**/*.js": {"when": "$(basename).ts"}
+    }
+}

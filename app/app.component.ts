@@ -4,6 +4,7 @@ import {RouteConfig} from "@angular/router-deprecated";
 import {NS_ROUTER_DIRECTIVES, NS_ROUTER_PROVIDERS} from "nativescript-angular/router";
 import {LoginComponent} from "./pages/login/login.component";
 import {EventListComponent} from "./pages/event/event-list.component";
+import {EventItemAddComponent} from "./pages/event/event-item-add.component";
 
 @Component({
   selector: "main",
@@ -15,5 +16,6 @@ import {EventListComponent} from "./pages/event/event-list.component";
 @RouteConfig([
   { path: "/Login", component: LoginComponent, name: "Login"},
   { path: "/EventList", component: EventListComponent, name: "EventList", useAsDefault: true},
+  { path: "/EventAdd", component: EventItemAddComponent, name: "EventAdd"},
 ])
 export class AppComponent {}

@@ -1,5 +1,5 @@
-<ActionBar title="EventActionBar">
-  <ActionItem (tap)="add()" ios.systemIcon="4" ios.position="left"></ActionItem>
+<ActionBar title="Évènements">
+  <ActionItem ios.systemIcon="4" (tap)="add()"ios.position="left"></ActionItem>
   <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="center">
     <Label [text]="txt" class="action-label" (tap)="change()"></Label>
   </StackLayout>
@@ -7,11 +7,10 @@
 </ActionBar>
 
 <GridLayout rows="*">
-  <ListView #EventList [items]="eventList">
+  <ListView [items]="eventList">
     <template let-item="item" let-odd="odd" let-even="even">
       <StackLayout [class.odd]="odd" [class.even]="even">
-        <!-- <item-component [event]="item"></item-component> -->
-        <Label text="{{ item.Name }}"></Label>
+        <item-component [event]="item"></item-component>
       </StackLayout>
     </template>
   </ListView>

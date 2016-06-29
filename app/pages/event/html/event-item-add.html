@@ -1,0 +1,15 @@
+<ActionBar title="Nouveau">
+  <StackLayout orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="center">
+    <Label [text]="txt ? txt : 'Nouveau' " class="action-label"></Label>
+  </StackLayout>
+  <ActionItem text="Créer" (tap)="add()" ios.position="right"></ActionItem>
+</ActionBar>
+
+<StackLayout #container>
+  <TextField #name hint="Ma super soirée !"></TextField>
+  <TextView #Description hint="Décrivez votre évènement"></TextView>
+  <!-- <TextField #name hint="Nom de l'évènement" [(ngModel)]="event.Name"></TextField> -->
+
+  <Button text="<" class="submit-button" (tap)="field_prev()"></Button>
+  <Button text=">" class="submit-button" (tap)="field_next()"></Button>
+</StackLayout>
